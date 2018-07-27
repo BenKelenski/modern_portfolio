@@ -1,5 +1,5 @@
-@import "config";
-@import "menu";
+@import 'config';
+@import 'menu';
 
 * {
   box-sizing: border-box;
@@ -11,10 +11,11 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 
+// Headings
 h1,
 h2,
 h3 {
@@ -22,7 +23,7 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   &.sm-heading {
@@ -49,13 +50,15 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh-60px);
+  // height: 100%;
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
 
     a {
       padding: 0.4rem;
+
       &:hover {
         color: $secondary-color;
         @include easeOut();
@@ -75,8 +78,8 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bioimage bio bio"
-    "job1 job2 job3";
+    'bioimage bio bio'
+    'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -94,9 +97,11 @@ main {
   .job-1 {
     grid-area: job1;
   }
+
   .job-2 {
     grid-area: job2;
   }
+
   .job-3 {
     grid-area: job3;
   }
@@ -133,27 +138,26 @@ main {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
-  
-  div{
+
+  div {
     font-size: 2rem;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     @include easeOut;
 
-    &:hover{
+    &:hover {
       padding: 0.5rem 1.5rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
-      
-      span{
+      span {
         color: set-text-color($secondary-color);
       }
     }
   }
 }
 
-//Button styles
+// Button Styles
 .btn {
   display: block;
   padding: 0.5rem 1rem;
@@ -180,9 +184,9 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darken($color: $primary-color, $amount: 10);
+  background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
 }
 
-@import "mobile";
+@import 'mobile';
